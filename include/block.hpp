@@ -18,6 +18,9 @@ public:
   void set_len(const float& length);
   void set_color(const float& R, const float& G, const float& B);
 
-  void draw(sf::RenderWindow window) const;
+  void draw(sf::RenderWindow& window) const;
 
+  Block() {};
+  Block(float x, float y);
+  Block(float x, float y, float len);
 };

@@ -1,3 +1,3 @@
-# A-MAZE-ING
+# Checkers
 
-This is a simple algorithm visualizer
+A checkers game made using c++

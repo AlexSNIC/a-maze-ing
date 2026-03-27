@@ -1,4 +1,8 @@
+#pragma once
 #include "../include/block.hpp"
+
+Block::Block(float x, float y) : pos(x,y) {}
+Block::Block(float x, float y, float len) : pos(x,y), len(len) {};
 
 const Point& Block::get_pos() const {
   return pos;
@@ -25,7 +29,7 @@ void Block::set_color(const float& R, const float& G, const float& B){
   color[1] = G;
   color[2] = B;
 };
-void Block::draw(sf::RenderWindow window) const {
+void Block::draw(sf::RenderWindow& window) const {
   sf::RectangleShape rect;
   rect.setFillColor(sf::Color(color[0], color[1], color[2]));
   rect.setPosition(sf::Vector2f(pos.x, pos.y));
